@@ -3,17 +3,17 @@ const dictionaryArea: any = document.getElementById("dictionary-area");
 const definitionArea: any = document.getElementById("definition");
 import fuzzy from "./fuzzy.js";
 
-function buildDictionaryHtmlInDivs(dppnDpr) {
+function buildDictionaryHtmlInDivs(dppnDpr:any) {
   let html: string = "";
-  dppnDpr.forEach(entry => {
+  dppnDpr.forEach((entry:any) => {
     html += `<div class="entry"><div class="head-word">${entry[0]}</div>  ${entry[1]}</div>`;
   });
   dictionaryArea.innerHTML = html;
 }
 
-function buildDictionaryHtml(dppnDpr) {
+function buildDictionaryHtml(dppnDpr:any) {
   let html: string = "<ul>";
-  dppnDpr.forEach(entry => {
+  dppnDpr.forEach((entry:any) => {
     html += `<li>${entry[0].toLowerCase()}</li>`;
   });
   dictionaryArea.innerHTML = html + "</ul>";
@@ -32,11 +32,11 @@ const inputWord = document.getElementById("word-input")!;
 inputWord.focus()
 
 inputWord.addEventListener("input", e => {
-  if (!e.currentTarget.value | e.currentTarget.value.length <=2){dictionaryArea.innerHTML=""} else
+  if (!e.currentTarget.value || e.currentTarget.value.length <=2){dictionaryArea.innerHTML=""} else
   if (e.currentTarget.value && e.currentTarget.value.length > 2) {
   {
   let html: string = `<ul class="results">`;
-  dppnDpr.forEach((item, index) => {
+  dppnDpr.forEach((item:any, index:number) => {
     if (new RegExp(fuzzy(e.currentTarget.value), "i").test(fuzzy(item[0]))) {
       html += `<li class="item" id="${index}">${item[0]}</li>`;
     }
