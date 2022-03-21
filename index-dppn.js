@@ -4,14 +4,14 @@ const definitionArea = document.getElementById("definition");
 import fuzzy from "./fuzzy.js";
 function buildDictionaryHtmlInDivs(dppnDpr) {
     let html = "";
-    dppnDpr.forEach(entry => {
+    dppnDpr.forEach((entry) => {
         html += `<div class="entry"><div class="head-word">${entry[0]}</div>  ${entry[1]}</div>`;
     });
     dictionaryArea.innerHTML = html;
 }
 function buildDictionaryHtml(dppnDpr) {
     let html = "<ul>";
-    dppnDpr.forEach(entry => {
+    dppnDpr.forEach((entry) => {
         html += `<li>${entry[0].toLowerCase()}</li>`;
     });
     dictionaryArea.innerHTML = html + "</ul>";
@@ -27,7 +27,7 @@ function buildDictionaryHtml(dppnDpr) {
 const inputWord = document.getElementById("word-input");
 inputWord.focus();
 inputWord.addEventListener("input", e => {
-    if (!e.currentTarget.value | e.currentTarget.value.length <= 2) {
+    if (!e.currentTarget.value || e.currentTarget.value.length <= 2) {
         dictionaryArea.innerHTML = "";
     }
     else if (e.currentTarget.value && e.currentTarget.value.length > 2) {

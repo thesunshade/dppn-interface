@@ -31,6 +31,7 @@ function buildDictionaryHtml(dppnDpr:any) {
 const inputWord = document.getElementById("word-input")!;
 inputWord.focus()
 
+
 inputWord.addEventListener("input", e => {
   if (!e.currentTarget.value || e.currentTarget.value.length <=2){dictionaryArea.innerHTML=""} else
   if (e.currentTarget.value && e.currentTarget.value.length > 2) {
