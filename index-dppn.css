@@ -1,8 +1,15 @@
+:root {
+  --text: rgb(128, 150, 125);
+  --accent: #7fff00;
+  --disabled: #ffe8a390;
+  --background: rgb(3, 20, 3);
+}
+
 body {
   display: flex;
   flex-direction: row;
-  background-color: rgb(3, 20, 3);
-  color: rgb(128, 150, 125);
+  background-color: var(--background);
+  color: var(--text);
   font-family: sans-serif;
 }
 
@@ -23,14 +30,14 @@ input {
   padding: 0.4rem;
   margin-left: 1rem;
   margin-top: 1rem;
-  background-color: chartreuse;
+  background-color: var(--accent);
   border: solid 2px black;
   border-radius: 10px;
 }
 input:focus {
   background-color: black;
-  outline: solid 2px chartreuse;
-  color: chartreuse;
+  outline: solid 2px var(--accent);
+  color: var(--accent);
 }
 
 .head-word {
@@ -43,7 +50,7 @@ input:focus {
 }
 
 a {
-  color: chartreuse;
+  color: var(--accent);
   text-decoration: none;
   font-weight: bold;
   font-family: sans-serif;
@@ -53,7 +60,7 @@ a {
 h1 {
   font-family: sans-serif;
   font-size: 1.2rem;
-  color: chartreuse;
+  color: var(--accent);
 }
 
 li p {
@@ -81,4 +88,21 @@ li p {
   ul.results li {
     margin-bottom: 0.5rem;
   }
+}
+
+.links-area {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.links-area a {
+  position: relative;
+  top: 0;
+  transition: top ease 0.5s;
+}
+.links-area a:hover {
+  top: -3px;
 }
