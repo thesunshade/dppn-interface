@@ -12,8 +12,8 @@ export default function renderDefinition(wordIndex) {
     `id="$1" class="cross-ref"`
   );
 
-  definitionArea.innerHTML = `<h1>${word} <a href="https://suttacentral.net/define/${word}" title="Go to the entry on SuttaCentral.net" target="_blank">🔗</a></h1>
-${definition}`;
+  definitionArea.innerHTML = `<h1>${word}</h1>
+<div>${definition}<div>`;
 
   window.scrollTo(0, 0);
 
