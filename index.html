@@ -16,7 +16,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="DPPN.ReadingFaithfully.org" />
     <meta name="twitter:creator" content="ReadingFaithfully.org" />
-    <link rel="stylesheet" href="index-dppn.css">
+    <link rel="stylesheet" href="index.css">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
     <title>DPPN Instant Lookup | ReadingFaithfully.org</title>
 </head>
@@ -24,12 +24,15 @@
 <body>
     <div id="list-area">
         <input id="word-input">
-        <div id="dictionary-area"></div>
-    </div>
-    <div class="right-side">
-        <div id="definition">Enter a name or part of name. Regex is allowed.<br>Then click on an entry to see the
-            definition.
+        <div id="status-bar">
+            <div>
+                <label for="fuzzy-box" id="for-fuzzy-box"><input id="fuzzy-box" type="checkbox" name="fuzzy-box"
+                        checked><span class="check-icon"></span>
+                    fuzzy mode</label>
+            </div>
+            <div id="count"></div>
         </div>
+        <div id="list"></div>
         <div class="links-area" style="text-align: center;">
             <!--MAIN SITE-->
             <a href="http://readingfaithfully.org" title="Support for your sutta readng practice" rel="noreferrer"
@@ -64,7 +67,13 @@
                     src="./images/favicon-GitHub-chartreuse.png" alt="GitHub icon"></a>
         </div>
     </div>
-    <script type="module" src="index-dppn.js"></script>
+
+    <div id="definition-area">Enter a name or part of name. Regex is allowed.<br>Then click on an entry to see the
+        definition.
+    </div>
+
+
+    <script type="module" src="index.js"></script>
 </body>
 
 </html>
