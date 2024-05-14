@@ -1,79 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta property="og:type" content="article" />
     <meta property="og:title" content="DPPN Instant Lookup | ReadingFaithfully" />
-    <meta property="og:description"
-        content="Instantly find Pali names in the canon with very forgiving search modes." />
+    <meta property="og:description" content="Instantly find Pali names in the canon with very forgiving search modes." />
     <meta property="og:url" content="https://dppn.readingfaithfully.org/" />
     <meta property="og:site_name" content="DPPN.ReadingFaithfully.org" />
-    <meta property="og:image" itemprop="image"
-        content="https://dppn.readingfaithfully.org/images/featuredImage-dppn.png" />
+    <meta property="og:image" itemprop="image" content="https://dppn.readingfaithfully.org/images/featuredImage-dppn.png" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="DPPN.ReadingFaithfully.org" />
     <meta name="twitter:creator" content="ReadingFaithfully.org" />
-    <link rel="stylesheet" href="index.css">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+    <link rel="stylesheet" href="index.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png" />
     <title>DPPN Instant Lookup | ReadingFaithfully.org</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div id="list-area">
-        <input id="word-input">
-        <div id="status-bar">
-            <div>
-                <label for="fuzzy-box" id="for-fuzzy-box"><input id="fuzzy-box" type="checkbox" name="fuzzy-box"
-                        checked><span class="check-icon"></span>
-                    fuzzy mode</label>
-            </div>
-            <div id="count"></div>
+      <input id="word-input" />
+      <div id="status-bar">
+        <div>
+          <label for="fuzzy-box" id="for-fuzzy-box">
+            <input id="fuzzy-box" type="checkbox" name="fuzzy-box" checked />
+            <span class="check-icon"></span>
+            fuzzy mode
+          </label>
         </div>
-        <div id="list"></div>
-        <div class="links-area" style="text-align: center;">
-            <!--MAIN SITE-->
-            <a href="http://readingfaithfully.org" title="Support for your sutta readng practice" rel="noreferrer"
-                target="_blank"><img width="20px" alt="ReadingFaithfully.org icon"
-                    src="./images/favicon-rf-chartreuse.png"></a>
-            <!--DAILY-->
-            <a href="http://daily.readingfaithfully.org" title="Daily Suttas" rel="noreferrer" target="_blank"><img
-                    width="20px" alt="Daily ReadingFaithfully.org icon" src="./images/favicon-drf-chartreuse.png"></a>
-            <!--CITATION HELPER-->
-            <a href="https://sutta.readingfaithfully.org" title="Citation Lookup Tool" rel="noreferrer"
-                target="_blank"><img width="20px" src="./images/favicon-citaton-helper-chartreuse.png"
-                    alt="Citation Lookup tool icon"></a>
-            <!--NAME SEARCH-->
-            <a href="https://name.readingfaithfully.org" title="Search for suttas by name" rel="noreferrer"
-                target="_blank"><img width="20px" src="./images/favicon-name-chartreuse.png"
-                    alt="Sutta Name Search icon"></a>
-            <!--SC LIGHT-->
-            <a href="https://sc.readingfaithfully.org" title="A lightweight interface for SuttaCentral.net"
-                rel="noreferrer" target="_blank"><img width="20px" src="./images/favicon-sc-light-chartreuse.png"
-                    alt="SuttaCentral.org Lightweight interface icon"></a>
-            <!--RANDOM-->
-            <a href="https://R.readingfaithfully.org" title="Get a random sutta from SuttaCentral.net" rel="noreferrer"
-                target="_blank"><img width="20px" src="./images/favicon-random-chartreuse.png"
-                    alt="SuttaCentral.org Lightweight interface icon"></a>
-            <!--PED-->
-            <a href="https://ped.readingfaithfully.org" title="A lightweight interface the Pali-English Dictionary"
-                rel="noreferrer" target="_blank"><img width="20px" src="./images/favicon-ped-chartreuse.png"
-                    alt="DPPN search icon"></a>
-            <!--GITHUB-->
-            <a href="https://github.com/thesunshade/dppn-interface/tree/main#readme"
-                title="The source code for this site" rel="noreferrer" target="_blank"><img width="20px"
-                    src="./images/favicon-GitHub-chartreuse.png" alt="GitHub icon"></a>
-        </div>
+        <div id="count"></div>
+      </div>
+      <div id="list"></div>
+      <div class="links-area" style="text-align: center">
+        <!--MAIN SITE-->
+        <a href="http://readingfaithfully.org" title="Support for your sutta reading practice" rel="noreferrer" target="_blank"><img width="20px" alt="ReadingFaithfully.org icon" src="./images/favicon-rf-chartreuse.png" /></a>
+        <!--DAILY-->
+        <a href="http://daily.readingfaithfully.org" title="Daily Suttas" rel="noreferrer" target="_blank"><img width="20px" alt="Daily ReadingFaithfully.org icon" src="./images/favicon-drf-chartreuse.png" /></a>
+        <!--CITATION HELPER-->
+        <a href="https://sutta.readingfaithfully.org" title="Citation Lookup Tool" rel="noreferrer" target="_blank"><img width="20px" src="./images/favicon-citaton-helper-chartreuse.png" alt="Citation Lookup tool icon" /></a>
+        <!--NAME SEARCH-->
+        <a href="https://name.readingfaithfully.org" title="Search for suttas by name" rel="noreferrer" target="_blank"><img width="20px" src="./images/favicon-name-chartreuse.png" alt="Sutta Name Search icon" /></a>
+        <!--SC LIGHT-->
+        <a href="https://sc.readingfaithfully.org" title="A lightweight interface for SuttaCentral.net" rel="noreferrer" target="_blank"><img width="20px" src="./images/favicon-sc-light-chartreuse.png" alt="SuttaCentral.org Lightweight interface icon" /></a>
+        <!--RANDOM-->
+        <a href="https://R.readingfaithfully.org" title="Get a random sutta from SuttaCentral.net" rel="noreferrer" target="_blank"><img width="20px" src="./images/favicon-random-chartreuse.png" alt="SuttaCentral.org Lightweight interface icon" /></a>
+        <!--PED-->
+        <a href="https://ped.readingfaithfully.org" title="A lightweight interface the Pali-English Dictionary" rel="noreferrer" target="_blank"><img width="20px" src="./images/favicon-ped-chartreuse.png" alt="DPPN search icon" /></a>
+        <!--GITHUB-->
+        <a href="https://github.com/thesunshade/dppn-interface/tree/main#readme" title="The source code for this site" rel="noreferrer" target="_blank"><img width="20px" src="./images/favicon-GitHub-chartreuse.png" alt="GitHub icon" /></a>
+      </div>
     </div>
 
-    <div id="definition-area">Enter a name or part of name. Regex is allowed.<br>Then click on an entry to see the
-        definition.
+    <div id="definition-area">
+      Enter a name or part of name. Regex is allowed.
+      <br />
+      Then click on an entry to see the definition.
     </div>
-
 
     <script type="module" src="index.js"></script>
-</body>
-
+  </body>
 </html>
